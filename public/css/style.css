@@ -1,0 +1,20 @@
+/*======## design Footer ##======*/
+.text-center{
+    background: cornflowerblue;
+    margin-top: 8px;
+    height:100px;
+    text-align: center;
+    line-height:100px;
+}
+/*======## design Header page ##======*/
+.header{background: khaki;height: 130px;margin-bottom:8px;display:flex;justify-content: center;
+       }
+/*======## design des Div contenants les Images et titre sur header ##======*/
+.header .logo {width: 15%;height:100%;display:flex;justify-content: center;flex-wrap: wrap;
+              }
+/*======## design Titres sur Header ##======*/
+b{font-family: 'Dancing Script', cursive;font-size: 20px;}
+/*======## design Titre Application Header ##======*/
+.header .headerTitre{width:70%; height:100%;}
+/*======## design Images header ##======*/
+.img{width:60%; height:60%;border-radius: 50%;}
