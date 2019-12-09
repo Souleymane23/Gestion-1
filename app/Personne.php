@@ -20,6 +20,10 @@ class Personne extends Model
     {
         return $this->hasMany('App\user');
     }
+    public function department()
+    {
+        return $this->belongsTo('App\department');
+    }
 }
 
 
