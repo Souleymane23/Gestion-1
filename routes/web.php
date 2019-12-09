@@ -40,3 +40,6 @@ Route::get("/createconge", "CongeController@createconge")->name('planifier_conge
 Route::post("Conges/createconge", "CongeController@store")->name('Conges');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+//La supprission
+Route::delete('personne/{id}',"PersonneController@destroy");

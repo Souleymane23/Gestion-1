@@ -20,14 +20,16 @@
                 <th scope="col">email</th>
                 <th scope="col">telephone</th>
                 <th scope="col">adresse</th>
-                <th scope="col">Editer</th
+                <th scope="col">Editer</th>
+                <th scope="col">Supprime</th>
+
             </tr>
             </thead>
             <tbody>
 
                 @foreach($persos as $perso)
-                    <tr>
-                    <th scope="row">#</th>
+                    <td>
+
                     <td>{{$perso->nom}}</td>
                     <td>{{$perso->prenom}}</td>
                     <td>{{$perso->matricule}}</td>
@@ -37,12 +39,20 @@
                    <td>{{$perso->telephone}}</td>
                    <td>{{$perso->adresse}}
                    </td>
-                        <td><p><a href="{{route('edit_employer',['id'=>$perso->id])}}">Editer</a></td>
-                    </tr>
+                        <td><p><a class="btn btn-primary" href="{{route('edit_employer',['id'=>$perso->id])}}">Editer</a></td>
+
+                    <td>
+                        <form action="personne/{{$perso->id}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
+                        </form>
+
+                    </td>
+
                     @endforeach
-
-
             </tbody>
+
         </table>
     </div>
 @endsection

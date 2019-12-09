@@ -54,5 +54,14 @@ class PersonneController extends Controller
         return redirect()->route('acceuil')->with(['success' => "les modifications ont ete bien effectuées"]);
 
     }
+    //partie suppression
+    public function destroy($id)
+    {
+        $sup = \App\Personne::find($id);
+        if($sup)
+            $sup->delete();
+        return redirect()->route('acceuil')->with(['success' => "Suppession reuissi"]);
+    }
+
 
 }
