@@ -25,6 +25,20 @@
         <input type="text" class="form-control" name="statut" placeholder="status">
     </div>
     <div class="form-group">
+        <div class="form-group">
+            <input type="text" class="form-control" name="fonction" placeholder="Fonction">
+        </div>
+        <div class="form-group">
+
+        <div class="form-group">
+            <select name="department_id" id="department_id" class="form-control">
+                <option value=""></option>
+                @foreach($depperso as $key => $value)
+                    <option value="{{$key}}">{{$value}}</option>
+                @endforeach
+            </select>
+
+        </div>
 
         <input type="email" class="form-control" name="email"  placeholder="adresse email">
     </div>

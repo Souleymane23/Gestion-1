@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7adecc8a-4fff-4760-9b6b-60fcc67c4b76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Personne.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonneController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_29_202121_create_personnes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_29_202121_create_personnes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acceuil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acceuil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/personne/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personne/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/personne/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personne/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +174,7 @@
       <workItem from="1575568953375" duration="7253000" />
       <workItem from="1575653548969" duration="5770000" />
       <workItem from="1575711400485" duration="12256000" />
-      <workItem from="1575913622784" duration="1483000" />
+      <workItem from="1575913622784" duration="3974000" />
     </task>
     <servers />
   </component>

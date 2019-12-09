@@ -15,6 +15,7 @@
                 <th scope="col">nom</th>
                 <th scope="col">prenom</th>
                 <th scope="col">matricule</th>
+                <th scope="col">Fonction</th>
                 <th scope="col">statut</th>
                 <th scope="col">email</th>
                 <th scope="col">telephone</th>
@@ -30,6 +31,7 @@
                     <td>{{$perso->nom}}</td>
                     <td>{{$perso->prenom}}</td>
                     <td>{{$perso->matricule}}</td>
+                    <td>{{$perso->fonction}}</td>
                    <td>{{$perso->statut}}</td>
                    <td>{{$perso->email}}</td>
                    <td>{{$perso->telephone}}</td>

@@ -9,8 +9,8 @@ class PersonneController extends Controller
 {
     public function create()
     {
-       // $personne = Personne::orderby('creates_ad', "desc")->get();
-        return view('personne.create');
+        $depperso= \App\department::pluck('nom_departemet','id');
+        return view('personne.create',compact('depperso'));
     }
 
     public function store(Request $request)
@@ -21,10 +21,12 @@ class PersonneController extends Controller
         $persone->nom = Request('nom');
         $persone->prenom = Request('prenom');
         $persone->matricule = Request('matricule');
+        $persone->fonction= Request('fonction');
         $persone->statut= Request('statut');
         $persone->email= Request('email');
         $persone->telephone= Request('telephone');
         $persone->adresse= Request('adresse');
+        $persone->department_id= Request('department_id');
         $persone->save();
         return redirect()->route('acceuil')->with(['success' => "l'enregistrement a ete bien effectuée"]);
 
@@ -41,6 +43,7 @@ class PersonneController extends Controller
             $pers->nom       = $request->input('nom');
             $pers->prenom    = $request->input('prenom');
             $pers->matricule = $request->input('matricule');
+            $pers->fonction    = $request->input('fonction');
             $pers->statut    = $request->input('statut');
             $pers->email     = $request->input('email');
             $pers->telephone = $request->input('telephone');

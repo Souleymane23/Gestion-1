@@ -18,7 +18,10 @@
                 <input type="number" class="form-control" name="matricule"  placeholder="matricule" value="{{$pers->matricule}}" >
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="statut" placeholder="status" value="{{$pers->statut}}">
+                <input type="text" class="form-control" name="fonction" placeholder="status" value="{{$pers->fonction}}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="statu" placeholder="status" value="{{$pers->statut}}">
             </div>
             <div class="form-group">
 
