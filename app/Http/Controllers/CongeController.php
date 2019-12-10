@@ -27,8 +27,35 @@ class CongeController extends Controller
         $conge->motif  = Request('motif');
         $conge->personne_id= Request('personne_id');
         $conge->save();
-        return redirect('/vuconge');
+        return redirect()->route('vuconge')->with(['success' => "Conges cree"]);
+    }
+    public function editconge($id)
+    {
+        $recupidperso= \App\Personne::pluck('matricule','id');
+        $congesudate = \App\Conge::find($id);//on recupere l'employer
+        return view('Conges.editconge', compact(['congesudate','recupidperso']));
+    }
 
+    public function updateconges (Request $request, $id)
+    {
+        $congesudate = \App\Conge::find($id);
+        if ($congesudate) {
+            $congesudate->date_debut = $request->input('date_debut');
+            $congesudate->date_fin = $request->input('date_fin');
+            $congesudate->motif = $request->input('motif');
+            $congesudate->personne_id= $request->input('personne_id');
+            $congesudate->save();
+        }
+
+        return redirect()->route('vuconge')->with(['success' => "les modifications ont ete bien effectuées"]);
+    }
+    //partie suppression
+    public function destroy($id)
+    {
+        $supconge = \App\Conge::find($id);
+        if($supconge)
+            $supconge->delete();
+        return redirect()->route('vuconge')->with(['success' => "Suppession reuissi"]);
     }
 
 }

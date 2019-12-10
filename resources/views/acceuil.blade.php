@@ -28,8 +28,7 @@
             <tbody>
 
                 @foreach($persos as $perso)
-                    <td>
-
+                    <tr>
                     <td>{{$perso->nom}}</td>
                     <td>{{$perso->prenom}}</td>
                     <td>{{$perso->matricule}}</td>
@@ -37,22 +36,16 @@
                    <td>{{$perso->statut}}</td>
                    <td>{{$perso->email}}</td>
                    <td>{{$perso->telephone}}</td>
-                   <td>{{$perso->adresse}}
-                   </td>
-                        <td><p><a class="btn btn-primary" href="{{route('edit_employer',['id'=>$perso->id])}}">Editer</a></td>
-
-                    <td>
-                        <form action="personne/{{$perso->id}}" method="post">
+                   <td>{{$perso->adresse}}</td>
+                   <td><p><a class="btn btn-primary" href="{{route('edit_employer',['id'=>$perso->id])}}">Editer</a></td>
+                    <td><form action="personne/{{$perso->id}}" method="post">
                             @csrf
                             @method('delete')
                             <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
-                        </form>
-
-                    </td>
-
+                        </form></td>
+                    </tr>
                     @endforeach
             </tbody>
-
         </table>
     </div>
 @endsection

@@ -35,10 +35,16 @@ Route::get('acceuil/{id}/edit',"PersonneController@edit")->name("edit_employer")
 Route::patch('update/{id}/edit', 'PersonneController@update')->name('update_employer');
 
 //Enregistrement Conges /update / edit and delete
-Route::get("/vuconge", "CongeController@vuconge");
+Route::get("/vuconge", "CongeController@vuconge")->name('vuconge');
 Route::get("/createconge", "CongeController@createconge")->name('planifier_conge');
 Route::post("Conges/createconge", "CongeController@store")->name('Conges');
+//updateConges
+Route::patch('updateconges/{id}/edit', 'CongeController@updateconges')->name('updateconges');
+Route::get('vuconge/{id}/editconge',"CongeController@editconge")->name("edit_conge");
+//======Supression Conge =========//
+Route::delete('Conges/{id}',"CongeController@destroy");
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 //La supprission
