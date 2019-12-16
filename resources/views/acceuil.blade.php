@@ -26,7 +26,6 @@
             </tr>
             </thead>
             <tbody>
-
                 @foreach($persos as $perso)
                     <tr>
                     <td>{{$perso->nom}}</td>

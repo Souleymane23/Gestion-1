@@ -52,3 +52,10 @@ Route::delete('personne/{id}',"PersonneController@destroy");
 Route::get("/admin", function(){
 	return view('admin');
 });
+
+//La partie Pointage############----############################################
+//Ajoute du pointage
+Route::get("/viewpointage","tallController@viewpointage")->name('affichagepointage');
+Route::post("Pointage/viewpointage", "tallController@store")->name('pointage');
+Route::get("/pointage", "tallController@pointage")->name('tablpointage');
+Route::patch('update/{id}/editpointage', 'tallController@update')->name('update_tally');
