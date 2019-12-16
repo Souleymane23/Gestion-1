@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7adecc8a-4fff-4760-9b6b-60fcc67c4b76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Conges/editconge.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Conges/updateconges.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/department/vudepartment.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CongeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CongeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Conges/vuconge.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Conges/vuconge.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acceuil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acceuil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +171,9 @@
       <workItem from="1575653548969" duration="5770000" />
       <workItem from="1575711400485" duration="12256000" />
       <workItem from="1575913622784" duration="6566000" />
-      <workItem from="1576000054230" duration="7367000" />
+      <workItem from="1576000054230" duration="8938000" />
+      <workItem from="1576172967653" duration="5728000" />
+      <workItem from="1576518844765" duration="389000" />
     </task>
     <servers />
   </component>
@@ -193,10 +189,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1575114019164" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576000074801">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576518844992">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576000074801" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576518844992" />
     <state x="390" y="176" key="run.anything.popup" timestamp="1575919588819">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

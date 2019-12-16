@@ -49,3 +49,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //La supprission
 Route::delete('personne/{id}',"PersonneController@destroy");
+Route::get("/admin", function(){
+	return view('admin');
+});
