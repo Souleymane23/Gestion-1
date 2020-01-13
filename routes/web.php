@@ -9,11 +9,10 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!*/
 
-
-
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
 });
+Route::get("/register/{id}", "\App\Http\Controllers\Auth\RegisterController@register")->name("register");
 
 /*Route::get("/", "produitController@index");
 
@@ -22,6 +21,11 @@ Route::get("/produits/{id}", function($id) {
 });
 
 */
+
+Route::get("/login", function(){
+    return view('login')->name('login');
+});
+
 Route::get("/commentaire/{id}", "commentsController@show");
 Route::get("/backoffice", "BackofficesController@back");
 Route::get("/conteneur", function(){
@@ -52,10 +56,35 @@ Route::delete('personne/{id}',"PersonneController@destroy");
 Route::get("/admin", function(){
 	return view('admin');
 });
-
+////Departement ############################################################
+///
+Route::get("/adddepartment", "DepartmentController@adddepartment")->name('adddepartment');
+Route::get("/vudepartment", "DepartmentController@vudepartmt")->name('vudptm');
+Route::get('vudepartment/{id}/editdptm',"DepartmentController@editdptm")->name("edit_departement");
+Route::post("department/adddepartment", "DepartmentController@storedpt")->name('adddepart');
+Route::patch('update/{id}/editdptm', 'DepartmentController@update')->name('update_dpt');
+Route::delete('department/{id}',"DepartmentController@destroy");
+//etdi
+Route::get('vudepartment/{id}/editdeptm',"DepartmentController@editdeptm")->name("edit_departemet");
+Route::patch('update/{id}/editdeptm', 'DepartmentController@update')->name('update_departement');
+///
 //La partie Pointage############----############################################
 //Ajoute du pointage
 Route::get("/viewpointage","tallController@viewpointage")->name('affichagepointage');
 Route::post("Pointage/viewpointage", "tallController@store")->name('pointage');
+Route::patch('updatepointage/{id}/edit', 'tallController@updatepointage')->name('update_Pointage');
 Route::get("/pointage", "tallController@pointage")->name('tablpointage');
-Route::patch('update/{id}/editpointage', 'tallController@update')->name('update_tally');
+//Suppression Pointage
+Route::delete('Pointage/{id}',"tallController@destroy");
+Route::get('pointage/{id}/edit',"tallController@edit")->name("edit_pointage");
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/deconnexion', 'CompteController@deconnexion');
+Route::get('/expired', "AbonnementController@expired")->name('email');
+Route::get("/pointer", "AjaxController@pointer");
+Route::post("/pointer", "AjaxController@addpointage");

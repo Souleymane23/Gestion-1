@@ -22,7 +22,6 @@
                         <option value="{{$key}}">{{$value}}</option>
                     @endforeach
                 </select>
-
             </div>
 
             <button type="submit" class="btn btn-primary">Sign in</button>

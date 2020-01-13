@@ -185,6 +185,13 @@
       <workItem from="1576000054230" duration="8938000" />
       <workItem from="1576172967653" duration="5728000" />
       <workItem from="1576518844765" duration="9516000" />
+      <workItem from="1576864942580" duration="9882000" />
+      <workItem from="1576931136620" duration="13523000" />
+      <workItem from="1577121893753" duration="11050000" />
+      <workItem from="1577207565413" duration="12005000" />
+      <workItem from="1577386405199" duration="872000" />
+      <workItem from="1577388247327" duration="2255000" />
+      <workItem from="1577392562587" duration="642000" />
     </task>
     <servers />
   </component>
@@ -192,25 +199,36 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="155" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575715288167">
+    <state x="459" y="155" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576784135249">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="459" y="155" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1575715288167" />
+    <state x="459" y="155" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1576784135249" />
     <state x="205" y="33" key="SettingsEditor" timestamp="1575114019164">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1575114019164" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576518844992">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1577469062499">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576518844992" />
-    <state x="390" y="176" key="run.anything.popup" timestamp="1575919588819">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1577469062499" />
+    <state x="390" y="176" key="run.anything.popup" timestamp="1576615981086">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="390" y="176" key="run.anything.popup/67.27.1299.741@67.27.1299.741" timestamp="1575919588819" />
+    <state x="390" y="176" key="run.anything.popup/67.27.1299.741@67.27.1299.741" timestamp="1576615981086" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1575720922907">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1575720922907" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/personne/create.blade.php</url>
+          <line>242</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

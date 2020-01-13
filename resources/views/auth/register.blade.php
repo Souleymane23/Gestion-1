@@ -1,14 +1,17 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.auth')
+@section('auth')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-left cont">
+        <div class="col-12"><h3>Inscription des utilisateur</h3></div>
+         <div class="col-md-6 imgs">
+        <img class="imaglogin" src="{{asset('images/inscription.png')}}">
+    </div>
+        <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="color">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register')}}">
                         @csrf
 
                         <div class="form-group row">
@@ -38,7 +41,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -60,7 +62,19 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                         <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('role') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="role" type="hidden" class="form-control @error('role') is-invalid @enderror" name="role" value="moderator" required autocomplete="role" autofocus>
+
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

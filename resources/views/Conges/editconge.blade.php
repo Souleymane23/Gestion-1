@@ -22,7 +22,7 @@
             <hr>
             <div class="form-group">
                 <select name="personne_id" id="personne_id" class="form-control">
-                    <option value=""></option>
+                    <option value="" ></option>
                     @foreach($recupidperso as $key => $value)
                         <option value="{{$key}}">{{$value}}</option>
                     @endforeach

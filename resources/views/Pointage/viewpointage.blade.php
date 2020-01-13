@@ -12,7 +12,7 @@
         <form action="{{route('pointage')}}" method="post" >
             @csrf
             <div class="form-group">
-                <input type="date" class="form-control" name="datejr" >
+                <input type="date" class="form-control" name="datejr">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Heure arrive</label>

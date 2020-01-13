@@ -1,0 +1,148 @@
+/*======## design Footer ##======*/
+body {
+    overflow-x: hidden;
+}
+
+/* Toggle Styles */
+
+#viewport {
+    padding-left: 226px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    background: transparent  ;
+    margin-right: 0;
+    font-family: 'Gupter', serif;
+    font-size: 18px;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background:#0d576e ;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+nav{
+    background-color:#c9dfe0;
+    height:100px;
+}
+#sidebar header {
+    background-color:#c9dfe0;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+h3{text-align: center;}
+hr{background: white;
+    height:3px;
+}
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+body{margin-top:20px;}
+.fa-fw {width: 2em;}
+.taille{width:200px;}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius:10%;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #c9dfe0; border-radius:15%; text-decoration: none;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: gold; border-radius: 20%;}
+.dropdown .dropbtn a {text-decoration:none; color: white}
+.imglogin{
+    width:40%;
+    height:60%;
+    margin-right: 20px;
+}
+.text-center{
+    background: #3D9099;
+    margin-top: 8px;
+    height:100px;
+    text-align: center;
+    line-height:100px;
+}
+/*======## design Header page ##======*/
+.header{background: #3D9099;height: 130px;margin-bottom:8px;display:flex;justify-content: center;
+       }
+/*======## design des Div contenants les Images et titre sur header ##======*/
+.header .logo {width: 15%;height:100%;display:flex;justify-content: center;flex-wrap: wrap;
+              }
+/*======## design Titres sur Header ##======*/
+b{font-family: 'Dancing Script', cursive;font-size: 20px;}
+/*======## design Titre Application Header ##======*/
+.header .headerTitre{width:70%; height:100%;}
+/*======## design Images header ##======*/
+.img{width:60%; height:60%;border-radius: 50%;}
+.imglogin{
+    width:40%;
+    height:90%;
+    margin-right: 150px;
+}
+.log{
+    background-color: #7d6608;
+    height:40px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
+.cont{
+    display: flex;
+    background-color: #1F618D;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+h3{color:#F4F6F7;}
+b{color: white;}
+.color{text-align: center; background-color:#3D9099; height:50px; line-height: 50px; font-size:20px; color: white;}
+.label{font-family: 'Oswald', sans-serif;}
+.imgs{background-color:transparent;}
+.imaglogin{width: 98%;
+height: 98%;}
+.imdmin{width: 80%;
+height: 70%;}

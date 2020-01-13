@@ -1,4 +1,5 @@
 @extends('layouts.adminlay')
+
 @section('admin')
 
-@endsection
+    @endsection

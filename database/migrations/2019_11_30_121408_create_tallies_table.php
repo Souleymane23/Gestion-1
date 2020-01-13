@@ -16,8 +16,8 @@ class CreateTalliesTable extends Migration
         Schema::create('tallies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('datejr');
-            $table-> time('heure_arrive');
-            $table-> time('heure_sorti');
+            $table-> time('heure_arrive')->nullable();
+            $table-> time('heure_sorti')->nullable();
             $table->string('absence')->nullable();
             $table-> string('motif')->nullable();
             $table->unsignedBigInteger('personne_id');
