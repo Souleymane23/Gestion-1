@@ -1,6 +1,5 @@
-@extends('layouts.headfooter')
-
-@section('headefooter')
+@extends('layouts.adminlay')
+@section('admin')
     <div class="container">
         <form action="{{route('updateconges',['id'=>$congesudate->id])}}" method="post" >
             @csrf

@@ -1,23 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\personne;
-
+use Illuminate\Paginattion\Paginator;
 class PersonneController extends Controller
 {
     public function create()
     {
+        $this->authorize('admin');
         $depperso= \App\department::pluck('nom_departemet','id');
-        return view('personne.create',compact('depperso'));
+        $conges= \App\Personne::pluck('matricule','id');
+        return view('personne.create',compact('depperso','conges'));
+
     }
 
     public function store(Request $request)
     {
+        $this->authorize('admin');
       $verifi_ajout = $request->validate(['nom'=>'required', 'prenom'=>'required','matricule'=>'required','statut'=>'required',
           'email'=>'email','telephone'=>'required|max:19','adresse'=>'required']);
-      $persone = new \App\Personne();
+        $persone = new \App\Personne();
         $persone->nom = Request('nom');
         $persone->prenom = Request('prenom');
         $persone->matricule = Request('matricule');
@@ -34,15 +37,18 @@ class PersonneController extends Controller
 
     public function edit($id)
     {
+        $this->authorize('admin');
         $pers = \App\Personne::find($id);//on recupere l'employer
-        return view('personne.edit', compact('pers'));
+        $reidedit= \App\department::pluck('nom_departemet','id');
+        $reedimarticule= \App\Personne::pluck('matricule','id');
+        return view('personne.edit', compact('pers','reidedit','reedimarticule'));
     }
     public function update(Request $request, $id){
+        $this->authorize('admin');
         $pers = \App\Personne::find($id);
         if($pers){
             $pers->nom       = $request->input('nom');
             $pers->prenom    = $request->input('prenom');
-            $pers->matricule = $request->input('matricule');
             $pers->fonction    = $request->input('fonction');
             $pers->statut    = $request->input('statut');
             $pers->email     = $request->input('email');
@@ -57,11 +63,10 @@ class PersonneController extends Controller
     //partie suppression
     public function destroy($id)
     {
+        $this->authorize('admin');
         $sup = \App\Personne::find($id);
         if($sup)
             $sup->delete();
         return redirect()->route('acceuil')->with(['success' => "Suppession reuissi"]);
     }
-
-
 }

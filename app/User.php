@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','role',
     ];
 
     /**
@@ -40,4 +40,12 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\personne');
     }
+    /**Cette méthode va determiner si le user connecté a un role admin*/
+public function isAdmin(){
+return strtolower(@$this->role) === 'admin'? true : false;
+}
+/**Cett méthode va determiner si le user connecté a un role moderator*/
+public function isModerator(){
+return strtolower(@$this->role) === 'moderator'? true : false;
+}
 }

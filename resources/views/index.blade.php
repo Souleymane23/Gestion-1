@@ -1,10 +1,13 @@
-@extends('layouts.adminlay')
-@section('admin')
+@extends('layouts.auth')
+
+@section('auth')
 <div class="container">
     <div class="row justify-content-center disp">
-        <div class="col-12"><h3>Application Gestion des Ressources Humaines</h3></div>
-        <img class="imglogin" src="{{asset('images/gestion.png')}}">
-        <div class="col-md-4">
+        <div class="col-12"><h3>Authentification des utilisateurs</h3></div>
+        <div class="col-md-6">
+        	 <img class="imglogin" src="{{asset('images/loggg.png')}}">
+        </div>
+        <div class="col-md-6">
             <div class="card">
                 <div class="log">{{ __('Login') }}</div>
                 <div class="card-body color">
@@ -69,7 +72,5 @@
             </div>
         </div>
     </div>
-
-
 </div>
 @endsection

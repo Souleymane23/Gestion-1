@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Personne;
+use Illuminate\Paginattion\Paginator;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,7 @@ class HomeController extends Controller
      public function acceuil()
      {
          $persos = Personne::all();
+         $persos = Personne::orderBy('created_at','DESC')->paginate(5);
          return view('acceuil', compact('persos'));
      }
     /**
@@ -26,8 +28,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index2()
     {
-        return view('home');
+       return view('login');
+   }
+    public function incription()
+    {
+        return view('inscription');
     }
+    
+   public function index()
+   {
+    return view('home');
+   }
 }

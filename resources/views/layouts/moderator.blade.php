@@ -9,22 +9,19 @@
     <!-- Sidebar -->
     <div id="sidebar">
         <header>
-            <a href="#">Tableau de baord</a>
+            <a href="#">Employer</a>
         </header>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-pills nav-stacked">
-                        <div class="dropdown" class="col-md-12">
-                            <button class="dropbtn"><a href="{{route('ajout_employers')}}" >Ajouts</a></button>
-                        </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Les Tableaux de vue</button>
+                            <button class="dropbtn">Espace Moderateur</button>
                             <div class="dropdown-content">
-                                <a href="{{route('acceuil')}}">Employers</a>
-                                <a href="{{route('vuconge')}}">Conges</a>
-                                <a href="{{route('tablpointage')}}">Pointage</a>
-                                <a href="{{route('vudptm')}}">Departement</a>
+                                <a href="{{route('employer')}}">Employers</a>
+                                <a href="{{route('vudeconges')}}">Conges</a>
+                                <a href="{{route('vupointages')}}">Pointage</a>
+                                <a href="{{route('dpt')}}">Departement</a>
                             </div>
                         </div>
                     </ul>
@@ -39,21 +36,21 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#"><i class="zmdi zmdi-notifications text-danger">
-
+                            
                         </i>
                         </a>
                     </li>
-                    <li><a href="#">Compte administrateur</a></li>
+                    <li><a href="#">Compte employer</a></li>
 
                 </ul>
                 <strong><a href="deconnexion">Deconnexion</a></strong>
             </div>
         </nav>
         <div class="container">
-            @yield('admin')
+            @yield('moderator')
         </div>
         <div class="footer">
-            <p>Copyrigth@2020 groupePyramidTech</p>
+
         </div>
     </div>
 </div>

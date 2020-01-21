@@ -1,6 +1,5 @@
-@extends('layouts.adminlay')
-@section('admin')
-    <div class="alert alert-success">{{session('success')}}</div>
+@extends('layouts.moderator')
+@section('moderator')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -9,7 +8,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Tableau des conges</li>
+                            <li class="breadcrumb-item active">Tableau des conges en cours</li>
                         </ol>
                     </div>
                 </div>
@@ -29,20 +28,26 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th>Noms</th>
+                                    <th>Prenoms</th>
+                                    <th>Matricules</th>
                                     <th class="desin">Date debut</th>
                                     <th class="desin">Date fin</th>
                                     <th>Motif Conge</th>
-                                    <th>Jour Restantes</th>
-                                    <th>Editer</th>
-                                    <th>Supprimer</th>
+                                    <th>Departements</th>
+                                    <th>Jrs Restantes</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($conge as $vuconges)
                                     <tr>
+                                       <td>{{$vuconges->nom}}</td>
+                                       <td>{{$vuconges->prenom}}</td>
+                                       <td>{{$vuconges->matricule}}</td>
                                         <td>{{$vuconges->date_debut}}</td>
                                         <td>{{$vuconges->date_fin}}</td>
                                         <td>{{$vuconges->motif}}</td>
+                                        <td>{{$vuconges->nom_departemet}}</td>
                                         <td>
                                             <?php
                                                $hoje = strtotime(date('Y-m-d'));
@@ -63,14 +68,6 @@
                                                echo "<b style='color:$color'>".$jr."</b>";
                                             ?>
                                         </td>
-
-                                        <td><p><a class="btn btn-primary" href="{{route('edit_conge',['id'=>$vuconges->id])}}">Editer</a></td>
-                                        <td><form action="Conges/{{$vuconges->id}}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                                <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
-                                            </form></td>
-                                    </tr>
                                 @endforeach
                                 <tr aria-label="...">
                                     {{$conge->links()}}

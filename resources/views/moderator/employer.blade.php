@@ -1,21 +1,23 @@
-@extends('layouts.adminlay')
-@section('admin')
+@extends('layouts.moderator')
+@section('moderator')
 
-    @if(session('success'))
-        <div class="alert alert-success">{{session('success')}}</div>
-    @endif
+    <div class="container">
+
+        <a href="{{route('ajout_employers')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Employer</a>
+    </div>
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Tableau des departements</h1>
+                        <h1>Liste Employers</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Tableau des departements</li>
+                            <li class="breadcrumb-item active">Liste Employers</li>
                         </ol>
                     </div>
                 </div>
@@ -26,37 +28,41 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card ">
                         <div class="card-header">
-                            <h3 class="card-title">Departement</h3>
+                            <h3 class="card-title">Listes des Employer</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Nom departement</th>
-                                    <th>Editer</th>
-                                    <th>delete</th>
+                                    <th>nom</th>
+                                    <th>prenom</th>
+                                    <th>Matircule</th>
+                                    <th>Fonction</th>
+                                    <th>statut</th>
+                                    <th>email</th>
+                                    <th>telephone</th>
+                                    <th>adresse</th>
+                                    <th>details</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($deptmt as $dp)
-                                    <tr>
-                                        <td>#</td>
-                                        <td>{{$dp->nom_departemet}}</td>
-
-                                        <td><p><a class="btn btn-primary" href="{{route('edit_departement',['id'=>$dp->id])}}" >Editer</a></td>
-                                        <td><form action="department/{{$dp->id}}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                                <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
-                                            </form></td>
-                                    </tr>
+                                @foreach($persos as $perso)
+                                <tr>
+                                    <td>{{$perso->nom}}</td>
+                                    <td>{{$perso->prenom}}</td>
+                                    <td>{{$perso->matricule}}</td>
+                                    <td>{{$perso->fonction}}</td>
+                                    <td>{{$perso->statut}}</td>
+                                    <td>{{$perso->email}}</td>
+                                    <td>{{$perso->telephone}}</td>
+                                  <td>{{$perso->adresse}}</td>
+                                  <td><button class="btn btn-primary btn-lg active">detail</button></td>
                                 @endforeach
-                                <tr aria-label="...">
-                                    {{$deptmt->links()}}
+                                 <tr aria-label="...">
+                                    {{$persos->links()}}
                                 </tr>
                                 </tbody>
                             </table>

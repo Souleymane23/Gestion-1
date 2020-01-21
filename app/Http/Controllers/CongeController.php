@@ -3,24 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Conge;
+use Illuminate\Paginattion\Paginator;
 
 class CongeController extends Controller
 {
     public function vuconge()
     {
+        $this->authorize('admin');
         $conge = Conge::all();
+        $conge = Conge::orderBy('created_at','DESC')->paginate(5);
         return view('Conges.vuconge', compact('conge'));
     }
     public function createconge()
     {
+        $this->authorize('admin');
         $congeidmigran= \App\Personne::pluck('matricule','id');
-        return view('Conges.createconge',compact('congeidmigran'));
+        return view('create.personne',compact('congeidmigran'));
     }
     public function store(Request $request)
     {
-
+        $this->authorize('admin');
         $conge = new \App\Conge();
         $conge->date_debut  = Request('date_debut');
         $conge->date_fin = Request('date_fin');
@@ -31,6 +34,7 @@ class CongeController extends Controller
     }
     public function editconge($id)
     {
+        $this->authorize('admin');
         $recupidperso= \App\Personne::pluck('matricule','id');
         $congesudate = \App\Conge::find($id);//on recupere l'employer
         return view('Conges.editconge', compact(['congesudate','recupidperso']));
@@ -38,6 +42,7 @@ class CongeController extends Controller
 
     public function updateconges (Request $request, $id)
     {
+        $this->authorize('admin');
         $congesudate = \App\Conge::find($id);
         if ($congesudate) {
             $congesudate->date_debut = $request->input('date_debut');
@@ -52,6 +57,7 @@ class CongeController extends Controller
     //partie suppression
     public function destroy($id)
     {
+        $this->authorize('admin');
         $supconge = \App\Conge::find($id);
         if($supconge)
             $supconge->delete();

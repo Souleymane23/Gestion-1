@@ -1,5 +1,4 @@
 @extends('layouts.headfooter')
-
 @section('headefooter')
     <div class="container">
         <form action="{{route('Conges')}}" method="post" >

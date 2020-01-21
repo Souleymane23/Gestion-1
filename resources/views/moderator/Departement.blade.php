@@ -1,9 +1,5 @@
-@extends('layouts.adminlay')
-@section('admin')
-
-    @if(session('success'))
-        <div class="alert alert-success">{{session('success')}}</div>
-    @endif
+@extends('layouts.moderator')
+@section('moderator')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -37,8 +33,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nom departement</th>
-                                    <th>Editer</th>
-                                    <th>delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,14 +40,6 @@
                                     <tr>
                                         <td>#</td>
                                         <td>{{$dp->nom_departemet}}</td>
-
-                                        <td><p><a class="btn btn-primary" href="{{route('edit_departement',['id'=>$dp->id])}}" >Editer</a></td>
-                                        <td><form action="department/{{$dp->id}}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                                <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
-                                            </form></td>
-                                    </tr>
                                 @endforeach
                                 <tr aria-label="...">
                                     {{$deptmt->links()}}
